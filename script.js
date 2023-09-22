@@ -7,30 +7,28 @@ document.addEventListener('mousemove', function(e) {
 
   let bYes = document.querySelector(".bYes");
   let bNo = document.querySelector(".bNo");
-  
-  bNo.style.animationName = "none"; //SET bNo AGAR DIEM
-  
-  function startBNoAnimation() {
-    bNo.style.animationName = "moveLeft";
+  let afk = document.querySelector("body");
+  let isTranslated = false;
+
+bYes.addEventListener('mouseover', () => {
+  if (!isTranslated) {
+    bYes.style.transform = 'translateX(320px)';
+    bNo.style.transform = 'translateX(-320px)';
+    isTranslated = true;
+  } else {
+    bYes.style.transform = 'translateX(0)';
+    bNo.style.transform = 'translateX(0)';
+    isTranslated = false;
   }
-  
-  bYes.addEventListener("mouseenter", () => {
-    bYes.style.animationName = "moveRight"
-    bYes.addEventListener("animationstart", startBNoAnimation, { once: true }); 
-  });
-  
-  bYes.addEventListener("mouseleave", () => {
-    bYes.style.animationName = "none";
-    bNo.style.animationName = "none"; 
-  });
+});
 
 
-
+// Script agar link ke google
 const myButton = document.getElementById("button2");
 myButton.addEventListener("click", function () {
- 
-  const nextPageUrl = "https://www.youtube.com"; 
 
-  window.location.href = nextPageUrl;
+const nextPageUrl = "https://www.google.com/"; 
+
+window.location.href = nextPageUrl;
 });
 
