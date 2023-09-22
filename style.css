@@ -1,0 +1,98 @@
+  html,body {
+    cursor: none;
+  }
+  body{
+    display: flex; /* Use flexbox to align elements horizontally */
+    align-items: center; 
+    justify-content: center;
+    height: 100vh;
+    margin: auto; 
+    background: #3741d0;
+    background: -moz-linear-gradient(top,  #3741d0 0%, #2979ff 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3741d0), color-stop(100%,#2979ff));
+    background: -webkit-linear-gradient(top,  #3741d0 0%,#2979ff 100%);
+    background: -o-linear-gradient(top,  #3741d0 0%,#2979ff 100%);
+    background: -ms-linear-gradient(top,  #3741d0 0%,#2979ff 100%);
+    background: linear-gradient(to bottom,  #3741d0 0%,#2979ff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3741d0', endColorstr='#2979ff',GradientType=0 );
+    height: 100vh;
+    padding-top: 12px;
+    position: relative;
+    @media (min-width: 600px) {
+        padding-top: 24px;
+    }
+  }
+
+
+  .container {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 80vh;
+    margin: 0 auto;
+    
+  }
+
+  .wrapper, .wrapper1{
+    border: 3px solid #000;
+    display: inline-block;
+    padding: 50px;
+    text-align: center;
+    margin-left: 50px;
+    background: #676981;
+  }
+
+  .bYes, .bNo{
+    width: 150px; 
+    height: 150px;
+    border-radius: 70%; 
+    border-width: 1mm;
+    padding: 5px;
+    font-size: 25px;
+     transition: transform 0.75s ease-in-out;
+  }
+
+  
+  .bYes:hover{
+    position:relative;
+    animation: moveRight 0.75s ease-in-out forwards;
+
+  }
+
+  .bNo{
+    position:relative;
+    animation: moveLeft 0.75s ease-in-out forwards; 
+  }
+
+  
+  @keyframes moveLeft {
+    0%   {top: 0px;right:0px;}
+    100% {top: 0px;right:204%;}
+  }
+
+  @keyframes moveRight {
+    0%   {top: 0px;left:0px;}
+    100% {top: 0px;left:204%;}
+  }
+
+
+  button {
+    cursor: none;
+  }
+  .cursor {
+    --cursor: #be1b67;
+    position: fixed;
+    top: -50px;
+    z-index: 11;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: none;
+    border: solid 2px var(--cursor);
+    pointer-events: none;
+    cursor: none;
+  }
+
+
+  
